@@ -1,18 +1,20 @@
-defmodule ElixirToe do
+# lib/lib.ex
+defmodule Elixir_Toe.App do
   @moduledoc """
-  Documentation for `ElixirToe`.
+  Main entry point for the Tic-Tac-Toe application
   """
+  def start(_start_type, _start_args) do
+    # code
+    main()
+    Supervisor.start_link([], strategy: :one_for_one)
+  end
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> ElixirToe.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def main() do
+    IO.puts("\n")
+    IO.puts("\n")
+    IO.puts("#######################")
+    IO.puts("Welcome to Tic-Tac-Toe!")
+    IO.puts("#######################")
+    TicTacToe.Game.play()
   end
 end

@@ -50,11 +50,8 @@ mix deps.get
 ### Running the Game
 
 ```bash
-# Build the executable
-mix escript.build
-
-# Run the game
-./elixir_toe
+# Build the executable & run the game
+mix run
 ```
 
 ### Game Instructions
